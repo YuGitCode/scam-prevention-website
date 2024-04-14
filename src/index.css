@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .navbar-icon {
+    @apply relative flex items-center justify-center 
+    h-12 w-12 mx-auto hover:text-white 
+    transition-all duration-300 ease-linear;
+  }
+
+  .icon-title {
+    @apply absolute w-auto p-2 m-2 min-w-max top-10 rounded-md shadow-md
+    text-white bg-gray-900 font-bold text-xs transition-all duration-100 scale-0 origin-left;
+  }
+}
