@@ -12,8 +12,8 @@ const Hero = () => {
         id='hero'
         className={`flex md:flex-row flex-row ${styles.paddingY}`}
       >
-        <div className='flex flex-col justify-between items-center w-full '>
-          <h1 className='text-[30px] pl-[10px] ss:pl-[5px] font-poppins font-semibold ss:text-[55px] md:text[40px] bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>
+        <div className='flex flex-col justify-between items-center w-full md:m-[-50px]'>
+          <h1 className='text-[30px] pl-[10px] ss:pl-[5px] font-poppins font-semibold ss:text-[55px] md:text-[55px] bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>
             Empower Your Trust, Defend Your Dreams
           </h1>
           <span className='pl-[10px] flex-1 font-poppins font-semibold ss:text-[60px] text-[30px] text-gradient'>
@@ -49,12 +49,12 @@ const Hero = () => {
         </div>
 
         <section
-          className={`${styles.flexCenter} animate-fadeInUp flex-row flex-wrap sm:mb-20 mb-6`}
+          className={`${styles.flexCenter} animate-fadeInUp flex-row flex-wrap sm:mb-20 mb-6 mt-[-30px]`}
         >
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className='flex-1 flex justify-start items-center md:flex-row flex-col m-3 mt-12'
+              className='flex-1 flex justify-center items-center md:flex-row flex-col m-3 mt-12 mx-auto'
             >
               <h4 className='font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white'>
                 {stat.value}
