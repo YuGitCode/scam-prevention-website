@@ -4,7 +4,7 @@ const Buttons = ({ styles }) => {
   return (
     <button
       type='button'
-      className={`hover:focus rounded-[10px] py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient outline-none ${styles}`}
+      className={`transition-transform duration-300 transform hover:scale-110 bg-blue-gradient focus:outline-none rounded-[10px] py-4 px-6 font-poppins font-medium text-[18px] text-primary  outline-none ${styles}  hover:bg-violet-600`}
     >
       Get Started
     </button>

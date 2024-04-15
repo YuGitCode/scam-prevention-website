@@ -32,7 +32,10 @@ const Hero = () => {
               src='src/assets/scam.png'
             ></img>
           </div>
-          <div className='absolute z-[0] w-[40%] h-[55%] top-0 pink__gradient' />
+          <div
+            className='absolute z-[0] w-[40%] h-[55%] top-0 pink__gradient '
+            style={{ pointerEvents: 'none' }}
+          />
         </div>
       </section>
       <div className='flex-1 justify-center items-center flex-row'>
@@ -62,7 +65,7 @@ const Hero = () => {
             </div>
           ))}
         </section>
-        <div className='flex justify-center mt-[-50px]'>
+        <div className='flex justify-center md:mt-[-50px] '>
           <BsArrowDownCircle className='text-white text-3xl animate-float' />
         </div>
       </div>

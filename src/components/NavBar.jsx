@@ -21,7 +21,7 @@ function NavBar() {
         {homepage.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+            className={`font-poppins font-normal cursor-pointer text-[16px] text-white transition-transform duration-300 transform hover:scale-110  ${
               index == homepage.length - 1 ? 'mr-0' : 'mr-10'
             }`}
           >
@@ -41,7 +41,7 @@ function NavBar() {
             {homepage.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+                className={`font-poppins font-normal cursor-pointer text-[16px] text-white transition-transform duration-300 transform hover:scale-110 ${
                   index == homepage.length - 1 ? 'mr-0' : 'mb-4'
                 }`}
               >
