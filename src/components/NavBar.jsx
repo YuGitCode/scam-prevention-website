@@ -1,58 +1,58 @@
-import React from 'react';
-import { FaHome } from 'react-icons/fa';
-import { BsClipboard2Data } from 'react-icons/bs';
-import { CgGames } from 'react-icons/cg';
-import { FaBookReader } from 'react-icons/fa';
-const NavBar = () => {
+import React, { useState } from 'react';
+import { homepage } from '../constants';
+import { CiMenuFries } from 'react-icons/ci';
+import { IoMdClose } from 'react-icons/io';
+function NavBar() {
+  const [toggle, setToggle] = useState(false);
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+  const menuicon = 'w-[28px] h-[28px] object-contain';
+  const menuclose = <IoMdClose size={25} color='white' className={menuicon} />;
+  const menu = <CiMenuFries size={25} color='white' className={menuicon} />;
   return (
-    //NavBar
-    //Placeholder so there margine between them. auto margin on x and max w of 1280px and
-    //
-    <nav>
-      <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
-        <div className='flex h-20 items-center justify-between'>
-          <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
-            <a
-              className='flex flex-shrink-0 items-center mr-4'
-              href='/index.html'
-            >
-              <span className='hidden md:block font-bold text-[#34d399] text-2xl ml-2'>
-                E-Secure
-              </span>
-            </a>
-            <div className='flex md:ml-auto'>
-              <div class='flex space-x-5'>
-                <NavBarIcon
-                  icon={<FaHome size='30' color='#34d399' />}
-                  label='Home'
-                ></NavBarIcon>
-                <NavBarIcon
-                  icon={<BsClipboard2Data size='30' color='#0ea5e9' />}
-                  label='Data'
-                />
-                <NavBarIcon
-                  icon={<CgGames size='30' color='#f9a8d4' />}
-                  label='Simulation'
-                />
-                <NavBarIcon
-                  icon={<FaBookReader size='30' color='white' />}
-                  label='Guide'
-                />
-              </div>
-            </div>
-          </div>
+    <nav className='w-full flex py-6 justify-between items-center navbar '>
+      <h1
+        className={`w-[124px] h-[32px] text-[26px] text-[#34d399] font-semibold font-poppins `}
+      >
+        E-Secure
+      </h1>
+      <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
+        {homepage.map((nav, index) => (
+          <li
+            key={nav.id}
+            className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+              index == homepage.length - 1 ? 'mr-0' : 'mr-10'
+            }`}
+          >
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </li>
+        ))}
+      </ul>
+
+      <div className='sm:hidden flex flex-1 justify-end items-center md:hidden'>
+        <div onClick={handleToggle}>{toggle ? menuclose : menu}</div>
+        <div
+          className={`${
+            toggle ? 'flex' : 'hidden'
+          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+        >
+          <ul className='list-none flex flex-col justify-end items-center flex-1'>
+            {homepage.map((nav, index) => (
+              <li
+                key={nav.id}
+                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+                  index == homepage.length - 1 ? 'mr-0' : 'mb-4'
+                }`}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </nav>
   );
-};
+}
 
-const NavBarIcon = ({ icon, label }) => (
-  <div className='flex flex-col items-center justify-center'>
-    <div className='navbar-icon group'>
-      {icon}
-      <span className='icon-title group-hover:scale-100'>{label}</span>
-    </div>
-  </div>
-);
 export default NavBar;

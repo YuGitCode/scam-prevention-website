@@ -1,45 +1,32 @@
 import React from 'react';
-import { ReactTyped } from 'react-typed';
-
+import styles from '../styles';
 const Hero = () => {
   return (
-    <section>
-      <div className=' w-auto sm:h-svh bg-security-bg bg-cover bg-center h-max py-60 mt-[-96px]'>
-        <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center'>
-          <div class='text-center'>
-            <h1 class='text-2xl font-extrabold text-white sm:text-5xl md:text-5xl'>
-              Defend Your Dreams
-            </h1>
-            <h1 class='text-2xl font-bold text-white sm:text-5xl md:text-5xl'>
-              Empower Your Trust
-            </h1>
-            <h1 class='text-2xl font-extrabold text-white sm:text-5xl md:text-5xl'>
-              Don't Pave the Way for Scammers
-            </h1>
-            <div className='flex justify-center items-center'>
-              <p className='md:text-4xl sm:text-3xl text-xl font-bold py-5'>
-                Identify and prevent{' '}
-              </p>
-              <ReactTyped
-                className='md:text-4xl sm:text-3xl text-xl font-bold pl-2 text-red-600 underline md:pl-4'
-                strings={[
-                  'Romance',
-                  'Investment',
-                  'Product Service',
-                  'Extortion',
-                  'Employment',
-                  'Impersonation',
-                ]}
-                typeSpeed={40}
-                backSpeed={50}
-                loop
-              />
-              <p className='md:text-4xl sm:text-3xl text-xl font-bold pl-2'>
-                Scam
-              </p>
-            </div>
-          </div>
+    <section
+      id='hero'
+      className={`flex md:flex-row flex-row ${styles.paddingY}`}
+    >
+      <div className='flex flex-col justify-between items-center w-full '>
+        <h1 className='text-[30px] pl-[10px] ss:pl-[5px] font-poppins font-semibold ss:text-[45px] bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>
+          Empower Your Trust, Defend Your Dreams
+        </h1>
+        <span className='pl-[10px] flex-1 font-poppins font-semibold ss:text-[50px] text-[30px] text-gradient'>
+          Don't pave the way for Scammers
+        </span>
+        <p
+          className={`${styles.paragraph} max-w-[950px] mt-5 pl-[10px] text-[13px] sm:text-[15px]`}
+        >
+          According to National Anti-Scam Centre $82.1 million is lost between
+          October to December in 2023, Don't fall vitcim to scams. Learn to
+          Identify and prevent it.
+        </p>
+        <div className='sm:flex w-[200px] justify-center items-center m-auto mt-[10px]'>
+          <img
+            className='w-[200px] h-[200px] relative z-[5] md:w-auto md:h-auto m-auto pt-[5px]'
+            src='src/assets/scam.png'
+          ></img>
         </div>
+        <div className='absolute z-[0] w-[40%] h-[55%] top-0 pink__gradient' />
       </div>
     </section>
   );
