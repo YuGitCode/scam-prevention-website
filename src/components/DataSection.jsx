@@ -1,34 +1,48 @@
 import React from 'react';
 import { stats } from '../constants';
-import styles from '../styles';
+import styles, { layout } from '../styles';
+import { ReactTyped } from 'react-typed';
+import { BsArrowDownCircle } from 'react-icons/bs';
+import { BiArrowFromTop } from 'react-icons/bi';
+import IntroData from './IntroData';
+import Button from './Buttons';
+import useOnScreen from './useOnScreen';
 const DataSection = () => {
+  const [ref, isVisible] = useOnScreen({
+    threshold: 0.5, // Trigger when 50% of the element is in view
+  });
   return (
     <>
-      <div className='flex-1 justify-center items-center flex-row'>
-        <div className='mx-auto flex-1 justify-center items-center flex-row'>
-          <h4 className='flex justify-center font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white'>
-            Scams occured in Australia in 2024
-          </h4>
-        </div>
-
-        <section
-          className={`${styles.flexCenter}flex-row flex-wrap sm:mb-20 mb-6`}
+      <section className={`${layout.section} mt-20`}>
+        <div
+          ref={ref}
+          className={`${layout.section}  ${
+            isVisible ? 'animate-fadeInUp' : 'opacity-0'
+          }`}
         >
-          {stats.map((stat) => (
-            <div
-              key={stat.id}
-              className='flex-1 flex justify-start items-center md:flex-row flex-col m-3'
-            >
-              <h4 className='font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white'>
-                {stat.value}
-              </h4>
-              <p className='font-poppins font-normal xs:text-[20px] text-[15px] xs:leading-[26px] leading-[21px] text-gradient uppercase ml-3'>
-                {stat.title}
-              </p>
-            </div>
-          ))}
-        </section>
-      </div>
+          <div ref={ref} className={layout.sectionInfo}>
+            <h2 className={styles.heading2}>
+              Explore the hidden patterns of Scams in Australia
+            </h2>
+            <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+              Dive into our comprehensive statistics and uncover the trends that
+              could affect you. whether you're interested in seeing how scams
+              vary by age,gender,type or state. We have a full breakdown
+              providing a detailed and clear informative perspective. Click here
+              to see where you or your loved ones might be most vulnerable and
+              stay one step ahead of the scammers
+            </p>
+
+            <Button styles='mt-10' />
+          </div>
+          <div className={layout.sectionImg}>
+            <img
+              src='src/assets/datacharts.png'
+              className='w-[300px] h-[300x]  opacity-95'
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 };

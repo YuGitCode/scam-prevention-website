@@ -12,6 +12,26 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      animation: {
+        fadeInUp: 'fadeInUp 1.5s ease-out', // Define the fadeInUp animation
+        float: 'float 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeInUp: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(20px)', // Adjust starting position as needed
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
     },
     screens: {
       xs: '480px',

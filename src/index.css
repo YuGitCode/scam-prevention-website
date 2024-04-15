@@ -138,3 +138,12 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+@layer components {
+  .scroll-watcher {
+    @apply fixed top-0 z-50 bg-gradient-to-r from-violet-500 to-fuchsia-500;
+    height: 10px;
+    transform-origin: left;
+    width: 0%; /* Start with 0% width */
+  }
+}
