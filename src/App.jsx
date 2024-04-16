@@ -3,6 +3,8 @@ import styles from './styles';
 import Navbar from './components/NavBar';
 import Hero from './components/Hero';
 import DataSection from './components/DataSection';
+import SimulationSection from './components/SimulationSection';
+import Datapage from './pages/Datapage';
 
 const App = () => {
   const [scrollWidth, setScrollWidth] = useState('0%');
@@ -41,6 +43,17 @@ const App = () => {
           <DataSection />
         </div>
       </div>
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <SimulationSection />
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <Datapage />
+      </div>
+
+
     </>
   );
 };

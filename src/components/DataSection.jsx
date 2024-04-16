@@ -1,10 +1,5 @@
 import React from 'react';
-import { stats } from '../constants';
 import styles, { layout } from '../styles';
-import { ReactTyped } from 'react-typed';
-import { BsArrowDownCircle } from 'react-icons/bs';
-import { BiArrowFromTop } from 'react-icons/bi';
-import IntroData from './IntroData';
 import Button from './Buttons';
 import useOnScreen from './useOnScreen';
 const DataSection = () => {
@@ -16,9 +11,8 @@ const DataSection = () => {
       <section className={`${layout.section} mt-20`}>
         <div
           ref={ref}
-          className={`${layout.section}  ${
-            isVisible ? 'animate-fadeInUp' : 'opacity-0'
-          }`}
+          className={`${layout.section}  ${isVisible ? 'animate-fadeInUp' : 'opacity-0'
+            }`}
         >
           <div ref={ref} className={layout.sectionInfo}>
             <h2 className={styles.heading2}>

@@ -16,7 +16,7 @@ const Hero = () => {
           <h1 className='text-[30px] pl-[10px] ss:pl-[5px] font-poppins font-semibold ss:text-[55px] md:text-[55px] bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>
             Empower Your Trust, Defend Your Dreams
           </h1>
-          <span className='pl-[10px] flex-1 font-poppins font-semibold ss:text-[60px] text-[30px] text-gradient'>
+          <span className='pl-[10px] flex-1 font-poppins font-semibold ss:text-[60px] text-[30px] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text'>
             Don't pave the way for Scammers
           </span>
           <p
@@ -32,14 +32,11 @@ const Hero = () => {
               src='src/assets/scam.png'
             ></img>
           </div>
-          <div
-            className='absolute z-[0] w-[40%] h-[55%] top-0 pink__gradient '
-            style={{ pointerEvents: 'none' }}
-          />
+
         </div>
       </section>
       <div className='flex-1 justify-center items-center flex-row'>
-        <div className='mx-auto flex-1 justify-center items-center flex-row'>
+        <div className='mx-auto flex-1 justify-center items-center flex-row mt-[10px]'>
           <h4 className='flex justify-center font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white'>
             <ReactTyped
               strings={['Scams occured in Australia in 2024']}
@@ -65,7 +62,7 @@ const Hero = () => {
             </div>
           ))}
         </section>
-        <div className='flex justify-center md:mt-[-50px] '>
+        <div className='flex justify-center md:mt-[-65px] '>
           <BsArrowDownCircle className='text-white text-3xl animate-float' />
         </div>
       </div>
