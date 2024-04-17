@@ -1,0 +1,72 @@
+{
+    "2024": {
+        "January": 32401522.59,
+        "February": 22877332.75, 
+        "March": 0,
+        "April": 0,
+        "May": 0,
+        "June": 0,
+        "July": 0,
+        "August": 0,
+        "September": 0,
+        "October": 0,
+        "November": 0,
+        "December": 0 
+      },
+    "2023": {
+      "January": 53326714,
+      "February": 43177181, 
+      "March": 45305693,
+      "April": 51468112,
+      "May": 53286168,
+      "June": 38108516,
+      "July": 42363317,
+      "August": 38587921,
+      "September": 29034040,
+      "October": 31325940,
+      "November": 25694370,
+      "December": 25100144
+    },
+    "2022": {
+        "January": 33100983,
+        "February": 37868474, 
+        "March": 95111417,
+        "April": 37130813,
+        "May": 51288138,
+        "June": 37608394,
+        "July": 42789612,
+        "August": 44715365,
+        "September": 43521062,
+        "October": 49252483,
+        "November": 51716704,
+        "December": 43281859
+      },
+      "2021": {
+        "January": 21789601,
+        "February": 20799912, 
+        "March": 20177188,
+        "April": 14083383,
+        "May": 29889848,
+        "June": 31154787,
+        "July": 27142382,
+        "August": 26263533,
+        "September": 29914726,
+        "October": 25829900,
+        "November": 33446944,
+        "December": 43231255
+      },
+      "2020": {
+        "January": 7382116,
+        "February": 14494336, 
+        "March": 15899322,
+        "April": 16089486,
+        "May": 12574900,
+        "June": 13503783,
+        "July": 12117579,
+        "August": 12299628,
+        "September": 16949349,
+        "October": 13484029,
+        "November": 18563171,
+        "December": 22313886
+      }
+  }

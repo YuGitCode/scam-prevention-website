@@ -1,10 +1,9 @@
-import React from 'react';
-import styles from '../styles';
-import { stats } from '../constants';
+import React from "react";
+import styles from "../styles";
+import { stats } from "../constants";
+import { ReactTyped } from "react-typed";
+import { BsArrowDownCircle } from "react-icons/bs";
 
-import { ReactTyped } from 'react-typed';
-import { BsArrowDownCircle } from 'react-icons/bs';
-import { BiArrowFromTop } from 'react-icons/bi';
 const Hero = () => {
   return (
     <>
@@ -32,14 +31,13 @@ const Hero = () => {
               src='src/assets/scam.png'
             ></img>
           </div>
-
         </div>
       </section>
       <div className='flex-1 justify-center items-center flex-row'>
         <div className='mx-auto flex-1 justify-center items-center flex-row mt-[10px]'>
           <h4 className='flex justify-center font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white'>
             <ReactTyped
-              strings={['Scams occured in Australia in 2024']}
+              strings={["Scams occured in Australia in 2024"]}
               typeSpeed={40}
             />
           </h4>

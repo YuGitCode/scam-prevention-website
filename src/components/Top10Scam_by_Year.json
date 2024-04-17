@@ -1,0 +1,62 @@
+{
+    "2024": [
+        {"type": "Phishing", "reports": 18626},
+        {"type": "False Billing", "reports": 5354},
+        {"type": "Online Shopping", "reports": 3170},
+        {"type": "Identity Theft", "reports": 3031},
+        {"type": "Classified Scam", "reports": 1695},
+        {"type": "Hacking", "reports": 1562},
+        {"type": "Remote access", "reports": 1197},
+        {"type": "Investment", "reports": 1116},
+        {"type": "Threats&Extortion", "reports": 841},
+        {"type": "Rebate", "reports": 783}
+      ],
+    "2023": [
+        {"type": "Phishing", "reports": 108624},
+        {"type": "False Billing", "reports": 395894},
+        {"type": "Online Shopping", "reports": 21346},
+        {"type": "Identity Theft", "reports": 19895},
+        {"type": "Hacking", "reports": 12446},
+        {"type": "Classified Scam", "reports": 11534},
+        {"type": "Remote access", "reports": 8975},
+        {"type": "Investment", "reports": 8161},
+        {"type": "Rebate", "reports": 7123},
+        {"type": "Threats&Extortion", "reports": 5608}
+  ],
+  "2022": [
+    {"type": "Phishing", "reports": 74575},
+        {"type": "False Billing", "reports": 27489},
+        {"type": "Online Shopping", "reports": 17886},
+        {"type": "Identity Theft", "reports": 16213},
+        {"type": "Remote access", "reports": 11792},
+        {"type": "Hacking", "reports": 11772},
+        {"type": "Classified Scam", "reports": 10649},
+        {"type": "Investment", "reports": 9361},
+        {"type": "Rebate", "reports": 4475},
+        {"type": "Dating&Romance", "reports": 3699}
+  ],
+  "2021": [
+    {"type": "Phishing", "reports": 71310},
+        {"type": "Threats&Extortion", "reports": 32426},
+        {"type": "Identity Theft", "reports": 22354},
+        {"type": "False Billing", "reports": 21546},
+        {"type": "Online Shopping", "reports": 20693},
+        {"type": "Remote access", "reports": 15698},
+        {"type": "Hacking", "reports": 15141},
+        {"type": "Investment", "reports": 9663},
+        {"type": "Classified Scam", "reports": 9561},
+        {"type": "Unexpected prize&lottery", "reports": 4428}
+  ],
+  "2020": [
+        {"type": "Phishing", "reports": 44079},
+        {"type": "Threats&Extortion", "reports": 32215},
+        {"type": "Identity Theft", "reports": 20939},
+        {"type": "Online Shopping", "reports": 15306},
+        {"type": "False Billing", "reports": 13120},
+        {"type": "Hacking", "reports": 8691},
+        {"type": "Remote access", "reports": 8472},
+        {"type": "Classified Scam", "reports": 7928},
+        {"type": "Investment", "reports": 7295},
+        {"type": "Unexpected prize&lottery", "reports": 4543}
+  ]
+}

@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import styles from '../styles';
-import Navbar from '../components/NavBar';
-import Hero from '../components/Hero';
-import DataSection from '../components/DataSection';
-import SimulationSection from '../components/SimulationSection';
-import Datapage from '../pages/Datapage';
+import React from "react";
+import styles from "../styles";
+import Hero from "../components/Hero";
+import DataSection from "../components/DataSection";
+import SimulationSection from "../components/SimulationSection";
 
 const Homepage = () => {
   return (
@@ -23,10 +21,6 @@ const Homepage = () => {
         <div className={`${styles.boxWidth}`}>
           <SimulationSection />
         </div>
-      </div>
-
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-        <Datapage />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
-import React from 'react';
-import styles, { layout } from '../styles';
-import Button from './Buttons';
-import useOnScreen from './useOnScreen';
+import React from "react";
+import styles, { layout } from "../styles";
+import Button from "./Buttons";
+import useOnScreen from "./useOnScreen";
 const DataSection = () => {
   const [ref, isVisible] = useOnScreen({
     threshold: 0.5, // Trigger when 50% of the element is in view
@@ -11,8 +11,9 @@ const DataSection = () => {
       <section className={`${layout.section} mt-20`}>
         <div
           ref={ref}
-          className={`${layout.section}  ${isVisible ? 'animate-fadeInUp' : 'opacity-0'
-            }`}
+          className={`${layout.section}  ${
+            isVisible ? "animate-fadeInUp" : "opacity-0"
+          }`}
         >
           <div ref={ref} className={layout.sectionInfo}>
             <h2 className={styles.heading2}>
