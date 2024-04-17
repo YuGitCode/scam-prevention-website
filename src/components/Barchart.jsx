@@ -47,7 +47,7 @@ const Barchart = () => {
           color: "white", // This will change the x-axis ticks color to white
         },
         grid: {
-          color: "rgba(255, 255, 255, 0.2", // Changes the color of x-axis grid lines
+          color: "rgba(255, 255, 255, 0.2)", // Changes the color of x-axis grid lines
         },
       },
       y: {
@@ -55,12 +55,12 @@ const Barchart = () => {
         ticks: {
           // This callback is used to format the Y-axis labels
           callback: function (value) {
-            return value === 0 ? "0" : value.toLocaleString() + "M";
+            return value === 0 ? "0" : "$" + value.toLocaleString() + "M";
           },
           color: "white",
         },
         grid: {
-          color: "rgba(255, 255, 255, 0.2", // Changes the color of x-axis grid lines
+          color: "rgba(255, 255, 255, 0.2)", // Changes the color of x-axis grid lines
         },
       },
     },
@@ -70,7 +70,7 @@ const Barchart = () => {
         display: true,
         position: "top",
         labels: {
-          color: "white", // Also sets legend text to white if needed
+          color: "white", // Set text to white
         },
       },
       title: {

@@ -1,63 +1,62 @@
 {
-    "2024": [
-        {"type": "Investment", "lost": 31553591.5},
-        {"type": "Job&Employment", "lost": 7876862.91},
-        {"type": "Dating&Romance", "lost": 4042864.3},
-        {"type": "Phishing", "lost": 2486525.8},
-        {"type": "False Billing", "lost": 1921950.7},
-        {"type": "Threats&Extortion", "lost": 1910186},
-        {"type": "Remote access", "lost": 1321352.7},
-        {"type": "Identity Theft", "lost": 1307791.2},
-        {"type": "Classified Scam", "lost": 739077.9},
-        {"type": "Online Shopping", "lost": 678237.3}
-      ],
-    "2023": [
-        {"type": "Investment", "lost": 291871800},
-        {"type": "Dating&Romance", "lost": 34344656},
-        {"type": "False Billing", "lost": 28007778},
-        {"type": "Phishing", "lost": 25896634},
-        {"type": "Job&Employment", "lost": 24354665},
-        {"type": "Remote access", "lost": 15531884},
-        {"type": "Threats&Extortion", "lost": 13868632},
-        {"type": "Identity Theft", "lost": 8598636},
-        {"type": "Rebate", "lost": 8200750},
-        {"type": "Classified Scam", "lost": 7761740}
-  ],
-  "2022": [
-        {"type": "Investment", "lost": 375997460},
-        {"type": "Dating&Romance", "lost": 40675825},
-        {"type": "False Billing", "lost": 25312185},
-        {"type": "Phishing", "lost": 24617192},
-        {"type": "Remote access", "lost": 21744454},
-        {"type": "Threats&Extortion", "lost": 13934433},
-        {"type": "Identity Theft", "lost": 10738029},
-        {"type": "Job&Employment", "lost": 9695719},
-        {"type": "Online Shopping", "lost": 9261357},
-        {"type": "Classified Scam", "lost": 8465343}
-  ],
-  "2021": [
-        {"type": "Investment", "lost": 177184295},
-        {"type": "Dating&Romance", "lost": 56175428},
-        {"type": "False Billing", "lost": 17303665},
-        {"type": "Remote access", "lost": 16412258},
-        {"type": "Threats&Extortion", "lost": 11077551},
-        {"type": "Identity Theft", "lost": 10159930},
-        {"type": "Online Shopping", "lost": 8074211},
-        {"type": "Classified Scam", "lost": 7114830}
-        {"type": "Phishing", "lost": 4324128},
-        {"type": "Hacking", "lost": 3041484}
-        
-  ],
-  "2020": [
-        {"type": "Investment", "lost": 65802807},
-        {"type": "Dating&Romance", "lost": 38916120},
-        {"type": "False Billing", "lost": 18464903},
-        {"type": "Threats&Extortion", "lost": 11833508},
-        {"type": "Remote access", "lost": 8441632},
-        {"type": "Online Shopping", "lost": 7384733},
-        {"type": "Classified Scam", "lost": 5529413},
-        {"type": "Health&Medical products", "lost": 3915689},
-        {"type": "Identity Theft", "lost": 3072287},
-        {"type": "Unexpected prize&lottery", "lost": 1706253}
-  ]
+  "2024": {
+    "Investment": 31553591.5,
+    "Job&Employment": 7876862.91,
+    "Dating&Romance": 4042864.3,
+    "Phishing": 2486525.8,
+    "False Billing": 1921950.7,
+    "Threats&Extortion": 1910186,
+    "Remote access": 1321352.7,
+    "Identity Theft": 1307791.2,
+    "Classified Scam": 739077.9,
+    "Online Shopping": 678237.3
+  },
+  "2023": {
+    "Investment": 291871800,
+    "Dating&Romance": 34344656,
+    "False Billing": 28007778,
+    "Phishing": 25896634,
+    "Job&Employment": 24354665,
+    "Remote access": 15531884,
+    "Threats&Extortion": 13868632,
+    "Identity Theft": 8598636,
+    "Rebate": 8200750,
+    "Classified Scam": 7761740
+  },
+  "2022": {
+    "Investment": 375997460,
+    "Dating&Romance": 40675825,
+    "False Billing": 25312185,
+    "Phishing": 24617192,
+    "Remote access": 21744454,
+    "Threats&Extortion": 13934433,
+    "Identity Theft": 10738029,
+    "Job&Employment": 9695719,
+    "Online Shopping": 9261357,
+    "Classified Scam": 8465343
+  },
+  "2021": {
+    "Investment": 177184295,
+    "Dating&Romance": 56175428,
+    "False Billing": 17303665,
+    "Remote access": 16412258,
+    "Threats&Extortion": 11077551,
+    "Identity Theft": 10159930,
+    "Online Shopping": 8074211,
+    "Classified Scam": 7114830,
+    "Phishing": 4324128,
+    "Hacking": 3041484
+  },
+  "2020": {
+    "Investment": 65802807,
+    "Dating&Romance": 38916120,
+    "False Billing": 18464903,
+    "Threats&Extortion": 11833508,
+    "Remote access": 8441632,
+    "Online Shopping": 7384733,
+    "Classified Scam": 5529413,
+    "Health&Medical products": 3915689,
+    "Identity Theft": 3072287,
+    "Unexpected prize&lottery": 1706253
+  }
 }
