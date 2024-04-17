@@ -3,6 +3,7 @@ import styles from "../styles";
 import { stats } from "../constants";
 import { ReactTyped } from "react-typed";
 import { BsArrowDownCircle } from "react-icons/bs";
+import scamImg from "../assets/scam.png";
 
 const Hero = () => {
   return (
@@ -28,7 +29,7 @@ const Hero = () => {
           <div className='sm:flex w-[200px] justify-center items-center m-auto mt-[10px] '>
             <img
               className='w-[200px] h-[200px] relative z-[5] md:w-auto md:h-auto m-auto pt-[5px]'
-              src='src/assets/scam.png'
+              src={scamImg}
             ></img>
           </div>
         </div>

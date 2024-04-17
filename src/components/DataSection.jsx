@@ -2,6 +2,7 @@ import React from "react";
 import styles, { layout } from "../styles";
 import Button from "./Buttons";
 import useOnScreen from "./useOnScreen";
+import datacharts from "../assets/datacharts.png";
 const DataSection = () => {
   const [ref, isVisible] = useOnScreen({
     threshold: 0.5, // Trigger when 50% of the element is in view
@@ -31,10 +32,7 @@ const DataSection = () => {
             <Button styles='mt-10' />
           </div>
           <div className={layout.sectionImg}>
-            <img
-              src='src/assets/datacharts.png'
-              className='w-[300px] h-[300x]  opacity-95'
-            />
+            <img src={datacharts} className='w-[300px] h-[300x]  opacity-95' />
           </div>
         </div>
       </section>
