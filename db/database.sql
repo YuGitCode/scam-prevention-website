@@ -262,3 +262,46 @@ VALUES
     (2020, 'Classified Scam', 7928),
     (2020, 'Investment', 7295),
     (2020, 'Unexpected prize&lottery', 4543);
+
+    -- mydb.tips definition
+
+CREATE TABLE `tips` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO tips(title, content, category) values
+('Check the Sender''s Details', 'Always examine the sender''s email address or contact information carefully. Many phishing attempts use email addresses that resemble those from reputable companies but often have small typos or different domains.', 'phishing'),
+('Look for Urgency or Threats', 'Phishers often create a sense of urgency or use threats to prompt a hasty response. Be wary of emails or messages that pressure you to act quickly to verify your account or update your information.', 'phishing'),
+('Avoid Clicking on Unsolicited Links', 'If you receive a link in an unexpected email or message, do not click on it directly. Instead, go to the website by typing the URL directly into your browser or using a bookmark you have previously saved.', 'phishing'),
+('Use Multi-Factor Authentication', 'Enable multi-factor authentication (MFA) on all accounts that support it. MFA adds an additional layer of security by requiring two or more credentials to log in, which makes it harder for phishers to gain access to your information.', 'phishing'),
+('Research the Investment and Company','Always conduct thorough research on any investment opportunity and the company behind it. Check their credentials, registration status, and whether they are licensed by relevant financial authorities.','investments'),
+('Seek Independent Advice','Before making any investment, consult with an independent financial advisor or a trusted expert. They can provide a second opinion and help assess the legitimacy and suitability of the investment.','investments'),
+('Beware of High Returns with Little or No Risk','Be skeptical of any investment that offers high returns with little or no risk. These are often red flags for scams, as all investments carry some level of risk.','investments'),
+('Avoid Pressure Tactics','Steer clear of investments that require you to act quickly or pressure you with limited-time offers. Legitimate investments do not need high-pressure sales tactics.','investments'),
+('Understand the Investment Completely','Make sure you fully understand how the investment works, the fees involved, and any terms and conditions before committing your money. Lack of clear, understandable information is often a sign of a scam.','investments'),
+('Verify Their Identity','Make sure the person you''re communicating with is who they say they are. You can ask them to video chat, or check their social media profiles to ensure their online presence matches what they tell you.','chatting'),
+('Be Cautious with Personal Information','Avoid sharing too much personal information early on. Scammers can use details like your address, birthdate, and social security number to steal your identity.','chatting'),
+('Watch for Love Bombing','Be wary of someone who expresses strong emotions or makes grand romantic gestures quickly without ever meeting you. This can be a tactic to manipulate you.','chatting'),
+('Never Send Money','Do not send money or provide your financial details to someone you''ve only met online, no matter how convincing their story might be.','chatting'),
+('Listen to Friends and Family','If your friends or family express concern about your online relationship, take their worries seriously. Sometimes an outside perspective can recognize red flags that you might have missed.','chatting');
+
+-- mydb.tips_card definition
+
+CREATE TABLE `tips_card` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `subtitle` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `image_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`id`,`category`),
+  UNIQUE KEY `tips_card_UN` (`category`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO tips_card (title,subtitle,category,image_url) VALUES
+('Phishing Prevention Playbook: How to Spot and Avoid Online Scams','Empowering Internet Users to Safeguard Against Fraudulent Websites','phishing','/src/assets/istockphoto-1346734927-612x612.jpg'),
+('Safeguarding Investments: A Guide to Spotting Scams','Empowering Investors to Detect Deception, Protect Wealth, and Achieve Steady Growth','investments','/src/assets/case2.jpg'),
+('Navigating Online Romance Safely: A Guide to Avoiding Scams','Empowering Hearts to Find Love While Dodging Deception','chatting','/src/assets/case3.jpg');

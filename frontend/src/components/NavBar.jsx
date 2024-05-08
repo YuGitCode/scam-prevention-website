@@ -20,33 +20,37 @@ function NavBar() {
     { id: "/", title: "Home", active: false },
     { id: "data", title: "Data", active: true },
     { id: "simulation", title: "Simulation", active: false },
+    { id: "learning_center", title: "Learning Center", active: false },
   ];
 
   // This is for the animation effect at the top of the website. Starts from 0$
-  const [scrollWidth, setScrollWidth] = useState("0%");
+  // const [scrollWidth, setScrollWidth] = useState("0%");
 
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    setScrollWidth(`${scrolled}%`);
-  };
+  // const handleScroll = () => {
+  //   const scrollTop = window.scrollY;
+  //   const docHeight =
+  //     document.documentElement.scrollHeight -
+  //     document.documentElement.clientHeight;
+  //   const scrolled = (scrollTop / docHeight) * 100;
+  //   setScrollWidth(`${scrolled}%`);
+  // };
 
   //Make sure handlescroll function triggers evertime there a scroll to calculate its position
   //And then unmount the component to ensure no memory leak.
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  {
-    /* This is the Navbar section where we will link the use between our pages*/
-  }
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+  // {
+  //   /* This is the Navbar section where we will link the use between our pages*/
+  // }
   return (
     <>
-      <div className='scroll-watcher' style={{ width: scrollWidth }} />
-      <div className='top-0 bg-gradient-to-r from-blue-800 to-indigo-900 w-full overflow-hidden bg-opacity-95 '>
+      {/*<div className='scroll-watcher' style={{ width: scrollWidth,  }} />*/}
+      <div 
+        className={`top-0 bg-gradient-to-r from-blue-800 to-indigo-900 w-full overflow-hidden bg-opacity-95 fixed mb-10`}
+        style={{zIndex:100}}
+        >
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <nav className='w-full flex py-6 justify-between items-center navbar '>

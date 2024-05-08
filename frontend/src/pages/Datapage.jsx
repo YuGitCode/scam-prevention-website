@@ -30,10 +30,11 @@ const Datapage = () => {
         return <Barchart />; // Renders nothing if 'none' is selected
     }
   };
+  const buttonClass = (chart) => `bg-blue-500 hover:bg-blue-400 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ${visibleChart === chart ? 'text-teal-400' : 'text-white'}`;
 
   return (
     // Main container with full viewport height and primary background color
-    <div className='bg-gradient-to-r from-blue-800 to-indigo-900 flex flex-col h-screen'>
+    <div className='bg-gradient-to-r from-blue-800 to-indigo-900 flex flex-col h-screen mt-20'>
       <div className='flex justify-center items-center pt-4'>
         <h2 className='text-white text-2xl font-bold'>Scam Statistics</h2>
       </div>
@@ -41,31 +42,32 @@ const Datapage = () => {
       <div className='flex justify-center p-4 gap-4'>
         {/*Buttons to select which chart to display; clicking changes the 'visibleChart' state*/}
         <button
-          className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+          className={buttonClass('barchart')}
           onClick={() => setVisibleChart("barchart")}
         >
           Age
         </button>
         <button
-          className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+          className={buttonClass('donutchart')}
           onClick={() => setVisibleChart("donutchart")}
         >
           Gender
         </button>
         <button
-          className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+
+          className={buttonClass('barchartT10S')}
           onClick={() => setVisibleChart("barchartT10S")}
         >
           Top 10 Types
         </button>
         <button
-          className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+          className={buttonClass('barchartT10SL')}
           onClick={() => setVisibleChart("barchartT10SL")}
         >
           Top 10 Loss
         </button>
         <button
-          className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+          className={buttonClass('barchartMonthly')}
           onClick={() => setVisibleChart("barchartMonthly")}
         >
           Monthly Loss

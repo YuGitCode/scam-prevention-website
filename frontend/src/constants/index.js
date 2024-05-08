@@ -11,6 +11,10 @@ export const homepage = [
     id: "sim-section",
     title: "Simulation",
   },
+  {
+    id: "lc-section",
+    title: "Learning Center",
+  },
 ];
 export const navLinks = [
   {
@@ -24,6 +28,10 @@ export const navLinks = [
   {
     id: "sim-page",
     title: "Sim-page",
+  },
+  {
+    id: "lc-page",
+    title: "lc-page",
   },
 ];
 

@@ -10,6 +10,8 @@ import Homepage from "./pages/Homepage";
 import MainLayout from "./layouts/MainLayout";
 import Datapage from "./pages/Datapage";
 import Simulation from "./pages/Simulation";
+import LearningCenter from "./pages/LearningCenter";
+import GuideInfoPage from './pages/GuideInfoPage';
 
 const App = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -37,6 +39,11 @@ const App = () => {
         />
         <Route path='/data' element={<Datapage />} />
         <Route path='/simulation' element={<Simulation />} />
+        <Route path='/learning_center' element={<LearningCenter />} />
+        <Route
+          path='/learning_center/guide_info/:category'
+          element={<GuideInfoPage />}
+        />
       </Route>
     )
   );
