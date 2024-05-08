@@ -17,6 +17,7 @@ const styles = {
 
   marginX: 'sm:mx-16 mx-6',
   marginY: 'sm:my-16 my-6',
+  margin:  'sm:mx-16 mx-6 sm:mt-12 mb-20 mt-4 mb-10'
 };
 
 export const layout = {

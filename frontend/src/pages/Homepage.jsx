@@ -9,7 +9,7 @@ const Homepage = () => {
   return (
     <>
       <div
-        className={`bg-gradient-to-r from-blue-800 to-indigo-900 ${styles.flexStart}`}
+        className={`bg-gradient-to-r from-blue-800 to-indigo-900 ${styles.flexStart} mt-20`}
       >
         {/* This is the Hero section */}
         <div className={`${styles.boxWidth}`}>

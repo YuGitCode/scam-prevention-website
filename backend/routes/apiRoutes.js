@@ -59,4 +59,40 @@ module.exports = function (app, connection) {
       }
     );
   });
+
+// API endpoint for retrieving data on the tips
+// API endpoint for retrieving data on the tips with an optional category filter
+app.get("/tips", (req, res) => {
+  let query = "SELECT * FROM tips";
+  let params = [];
+
+  if (req.query.category) {
+    query += " WHERE category = ?";
+    params = [req.query.category];
+  }
+
+  connection.query(query, params, (error, results) => {
+    if (error) {
+      console.error("Error on querying tips:", error);
+      return res.status(500).send("Error retrieving data");
+    }
+    res.json(results);
+  });
+});
+
+  
+
+  // API endpoint for retrieving data on the tips card
+  app.get("/tips_card", (req, res) => {
+    connection.query(
+      "SELECT * from tips_card",
+      (error, results) => {
+        if (error) {
+          console.error(error);
+          return res.status(500).send("Error retrieving data");
+        }
+        res.send(results);
+      }
+    );
+  });
 };
