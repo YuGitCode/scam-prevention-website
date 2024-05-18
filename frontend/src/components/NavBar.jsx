@@ -5,6 +5,25 @@ import { NavLink } from "react-router-dom";
 import styles from "../styles";
 
 function NavBar() {
+  useEffect(() => {
+    function handleResize() {
+      // Checks if the screen width is greater than or equal to the medium breakpoint (768px)
+      if (window.innerWidth >= 768) {
+        setToggle(false);
+      }
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   //This is for the transitioning between menu icon and cross icon
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
@@ -21,36 +40,15 @@ function NavBar() {
     { id: "data", title: "Data", active: true },
     { id: "simulation", title: "Simulation", active: false },
     { id: "learning_center", title: "Learning Center", active: false },
+    { id: "news", title: "News", active: false },
   ];
 
-  // This is for the animation effect at the top of the website. Starts from 0$
-  // const [scrollWidth, setScrollWidth] = useState("0%");
-
-  // const handleScroll = () => {
-  //   const scrollTop = window.scrollY;
-  //   const docHeight =
-  //     document.documentElement.scrollHeight -
-  //     document.documentElement.clientHeight;
-  //   const scrolled = (scrollTop / docHeight) * 100;
-  //   setScrollWidth(`${scrolled}%`);
-  // };
-
-  //Make sure handlescroll function triggers evertime there a scroll to calculate its position
-  //And then unmount the component to ensure no memory leak.
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-  // {
-  //   /* This is the Navbar section where we will link the use between our pages*/
-  // }
   return (
     <>
       {/*<div className='scroll-watcher' style={{ width: scrollWidth,  }} />*/}
-      <div 
-        className={`top-0 bg-gradient-to-r from-blue-800 to-indigo-900 w-full overflow-hidden bg-opacity-95 fixed mb-10`}
-        style={{zIndex:100}}
-        >
+      <div
+        className={`top-0 bg-gradient-to-r from-blue-800 to-indigo-900 w-full overflow-hidden bg-opacity-95 sticky z-50`}
+      >
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <nav className='w-full flex py-6 justify-between items-center navbar '>
@@ -86,8 +84,8 @@ function NavBar() {
                 <div onClick={handleToggle}>{toggle ? menuclose : menu}</div>
                 <div
                   className={`${
-                    toggle ? "flex" : "hidden"
-                  } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+                    toggle ? "flex opacity-100" : "hidden opacity-0"
+                  } transition-opacity duration-300 p-6 bg-black-gradient fixed top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar `}
                 >
                   {/* Functionality is the same as previous one */}
                   <ul className='list-none flex flex-col justify-end items-center flex-1'>

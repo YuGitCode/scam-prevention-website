@@ -15,6 +15,10 @@ export const homepage = [
     id: "lc-section",
     title: "Learning Center",
   },
+  {
+    id: "news-section",
+    title: "News",
+  },
 ];
 export const navLinks = [
   {
@@ -32,6 +36,10 @@ export const navLinks = [
   {
     id: "lc-page",
     title: "lc-page",
+  },
+  {
+    id: "news-page",
+    title: "news-page",
   },
 ];
 

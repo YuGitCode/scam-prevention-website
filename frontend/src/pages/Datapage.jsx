@@ -7,6 +7,7 @@ import BarchartT10SL from "../components/Datapages/BarchartT10SL.jsx";
 import BarchartMonthly from "../components/Datapages/BarchartMonthly.jsx";
 // Importing CSS styles
 import styles from "../styles";
+import scrollToTop from "../components/scrollToTop.jsx";
 
 // Datapage functional component definition
 const Datapage = () => {
@@ -15,6 +16,7 @@ const Datapage = () => {
 
   // Function to render the appropriate chart based on 'visibleChart' state
   const renderChart = () => {
+    scrollToTop(); //Scrolls to the top when page change
     switch (visibleChart) {
       case "barchart":
         return <Barchart />;
@@ -30,11 +32,14 @@ const Datapage = () => {
         return <Barchart />; // Renders nothing if 'none' is selected
     }
   };
-  const buttonClass = (chart) => `bg-blue-500 hover:bg-blue-400 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ${visibleChart === chart ? 'text-teal-400' : 'text-white'}`;
+  const buttonClass = (chart) =>
+    `bg-blue-500 hover:bg-blue-400 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ${
+      visibleChart === chart ? "text-teal-400" : "text-white"
+    }`;
 
   return (
     // Main container with full viewport height and primary background color
-    <div className='bg-gradient-to-r from-blue-800 to-indigo-900 flex flex-col h-screen mt-20'>
+    <div className='bg-gradient-to-r from-blue-800 to-indigo-900 flex flex-col h-screen'>
       <div className='flex justify-center items-center pt-4'>
         <h2 className='text-white text-2xl font-bold'>Scam Statistics</h2>
       </div>
@@ -42,32 +47,31 @@ const Datapage = () => {
       <div className='flex justify-center p-4 gap-4'>
         {/*Buttons to select which chart to display; clicking changes the 'visibleChart' state*/}
         <button
-          className={buttonClass('barchart')}
+          className={buttonClass("barchart")}
           onClick={() => setVisibleChart("barchart")}
         >
           Age
         </button>
         <button
-          className={buttonClass('donutchart')}
+          className={buttonClass("donutchart")}
           onClick={() => setVisibleChart("donutchart")}
         >
           Gender
         </button>
         <button
-
-          className={buttonClass('barchartT10S')}
+          className={buttonClass("barchartT10S")}
           onClick={() => setVisibleChart("barchartT10S")}
         >
           Top 10 Types
         </button>
         <button
-          className={buttonClass('barchartT10SL')}
+          className={buttonClass("barchartT10SL")}
           onClick={() => setVisibleChart("barchartT10SL")}
         >
           Top 10 Loss
         </button>
         <button
-          className={buttonClass('barchartMonthly')}
+          className={buttonClass("barchartMonthly")}
           onClick={() => setVisibleChart("barchartMonthly")}
         >
           Monthly Loss

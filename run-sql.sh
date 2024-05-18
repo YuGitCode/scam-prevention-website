@@ -42,4 +42,9 @@ sudo docker exec -i ${MYSQL_CONTAINER_NAME} mysql -u${MYSQL_USER} -p${MYSQL_PASS
 sudo docker exec -it 29692c5bb746 mysql -u root -p
 echo "MySQL container setup and database initialization complete."
 
+#Do the following the in the frontend folder
+#Build for Local Dev run
+npm run build:dev
 
+#Build for Production
+npm run build

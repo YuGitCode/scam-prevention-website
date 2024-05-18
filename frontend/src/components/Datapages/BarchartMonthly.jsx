@@ -34,24 +34,17 @@ function BarchartMonthly() {
         const labels = entries.map((entry) => entry[0]);
         const values = entries.map((entry) => entry[1]).map(formatMillions);
 
+        const maxAmount = Math.max(...values);
+        const backgroundColor = values.map((value) =>
+          value == maxAmount ? "#ef4444" : "#fde047"
+        );
         setChartData({
           labels: labels,
           datasets: [
             {
               label: `Top 10 Scams Money Lost in ${activeYear}`,
               data: values,
-              backgroundColor: [
-                "#fde047", // green
-                "#4ade80", // purple
-                "#f59e0b", // yellow
-                "#5eead4", // blue
-                "#8b5cf6", // pink
-                "#ec4899", // red
-                "#fecdd3", // cyan
-                "#f0fdfa", // white
-                "#fdba74", // violet
-                "rgba(255, 165, 0, 1)", // orange
-              ],
+              backgroundColor: backgroundColor,
 
               borderWidth: 1,
             },
@@ -108,7 +101,7 @@ function BarchartMonthly() {
         callbacks: {
           label: function (context) {
             let value = context.parsed.y;
-            return `${context.label}: ${value.toLocaleString()}M`;
+            return `$${context.label}: ${value.toLocaleString()} Millions`;
           },
         },
       },

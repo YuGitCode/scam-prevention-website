@@ -3,7 +3,7 @@ import React from "react";
 //the opensource that we use to make the simulation
 const Simulation = () => {
   return (
-    <div className='w-full md:mt-10'>
+    <div className='w-full'>
       <iframe
         src='https://fit5120.github.io/anti-fraud/'
         title='anti fraud game'

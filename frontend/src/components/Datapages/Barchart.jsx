@@ -35,14 +35,23 @@ const Barchart = () => {
         const labels = Object.keys(data);
         const values = Object.values(data).map(formatMillions);
 
+        const maxAmount = Math.max(...values);
+        const backgroundColor = values.map((value) =>
+          value == maxAmount ? "#ef4444" : "#fde047"
+        );
+
+        const borderColor = values.map((value) =>
+          value == maxAmount ? "#ef4444" : "#fde047"
+        );
+
         setChartData({
           labels: labels,
           datasets: [
             {
-              label: "Amount (in millions)",
+              label: "Highest rate of victims",
               data: values,
-              backgroundColor: "#F6AF3B",
-              borderColor: "#F6AF3B",
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
               borderWidth: 1,
             },
           ],
@@ -102,7 +111,7 @@ const Barchart = () => {
           // This callback is used to format the tooltip
           label: function (context) {
             let value = context.parsed.y;
-            return `${value.toLocaleString()}M`;
+            return `$${value.toLocaleString()} Millions`;
           },
         },
       },

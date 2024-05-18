@@ -6,10 +6,12 @@
   "scripts": {
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
+    "install:model": "cd backend/learningModel && pip install requirementList.txt",
     "install:both": "npm-run-all --parallel install:backend install:frontend",
     "start:backend": "cd backend && node index.js",
+    "start:model": "cd backend/learningModel && python run_model.py",
     "start:frontend": "cd frontend && npm run dev",
-    "start:both": "npm-run-all --parallel start:backend start:frontend",
+    "start:both": "npm-run-all --parallel start:backend start:frontend start:model",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

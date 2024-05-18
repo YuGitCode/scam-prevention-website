@@ -1,4 +1,6 @@
 module.exports = function (app, connection) {
+  const { spawn } = require("child_process");
+
   // API endpoint for retrieving data on money lost by year and month
   app.get("/moneyLostyearMonth", (req, res) => {
     connection.query("SELECT * FROM moneyLost_year_month", (error, results) => {
@@ -60,39 +62,36 @@ module.exports = function (app, connection) {
     );
   });
 
-// API endpoint for retrieving data on the tips
-// API endpoint for retrieving data on the tips with an optional category filter
-app.get("/tips", (req, res) => {
-  let query = "SELECT * FROM tips";
-  let params = [];
+  // API endpoint for retrieving data on the tips
+  // API endpoint for retrieving data on the tips with an optional category filter
+  app.get("/tips", (req, res) => {
+    let query = "SELECT * FROM tips";
+    let params = [];
 
-  if (req.query.category) {
-    query += " WHERE category = ?";
-    params = [req.query.category];
-  }
-
-  connection.query(query, params, (error, results) => {
-    if (error) {
-      console.error("Error on querying tips:", error);
-      return res.status(500).send("Error retrieving data");
+    if (req.query.category) {
+      query += " WHERE category = ?";
+      params = [req.query.category];
     }
-    res.json(results);
-  });
-});
 
-  
-
-  // API endpoint for retrieving data on the tips card
-  app.get("/tips_card", (req, res) => {
-    connection.query(
-      "SELECT * from tips_card",
-      (error, results) => {
-        if (error) {
-          console.error(error);
-          return res.status(500).send("Error retrieving data");
-        }
-        res.send(results);
+    connection.query(query, params, (error, results) => {
+      if (error) {
+        console.error("Error on querying tips:", error);
+        return res.status(500).send("Error retrieving data");
       }
-    );
+      res.json(results);
+    });
+  });
+
+  app.get("/cards", (req, res) => {
+    connection.query("SELECT * FROM cards", (error, results) => {
+      if (error) {
+        console.error("Failed to fetch cards:", error);
+        res.status(500).send("Error retrieving cards data");
+        return;
+      }
+      res.json(results);
+    });
   });
 };
+
+

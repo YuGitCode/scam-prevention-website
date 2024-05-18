@@ -11,9 +11,21 @@ import MainLayout from "./layouts/MainLayout";
 import Datapage from "./pages/Datapage";
 import Simulation from "./pages/Simulation";
 import LearningCenter from "./pages/LearningCenter";
-import GuideInfoPage from './pages/GuideInfoPage';
+import GuideInfoPage from "./pages/GuideInfoPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import News from "./pages/News";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+// Import AOS and AOS CSS
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Values from 0 to 3000, with step 50ms
+    });
+  }, []);
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -40,10 +52,12 @@ const App = () => {
         <Route path='/data' element={<Datapage />} />
         <Route path='/simulation' element={<Simulation />} />
         <Route path='/learning_center' element={<LearningCenter />} />
+        <Route path='/News' element={<News />} />
         <Route
           path='/learning_center/guide_info/:category'
           element={<GuideInfoPage />}
         />
+        <Route path='*' element={<NotFoundPage />} />
       </Route>
     )
   );

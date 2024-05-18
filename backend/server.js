@@ -4,28 +4,14 @@ const app = express();
 const path = require("path");
 const connection = require("./config/dbconfig");
 const setupRoutes = require("./routes/apiRoutes");
-const { spawn } = require('child_process');
 
 app.use(cors());
+
 // Serve static files from the frontend's dist directory
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-app.get("/py_test", (req, res) => {
-  let py = spawn('py',['test.py']);
-  let result = '';
-  py.stdout.on('data', (data) => {
-    result += data.toString();
-  });
+app.use(express.json());
 
-  py.stderr.on('data', (data) => {
-    console.error(`stderr: ${data}`);
-  });
-
-  py.on('close', (code) => {
-    console.log(`child process exited with code ${code}`);
-    res.send(result);
-  });
-})
 
 app.get("/", (req, res) => {
   res.send("This is backend");

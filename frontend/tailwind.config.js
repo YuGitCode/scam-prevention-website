@@ -38,10 +38,12 @@ export default {
       },
     },
     screens: {
+      xxs:"400px",
       xs: "480px",
       ss: "620px",
       sm: "768px",
       md: "1060px",
+      semLg:"1080px",
       lg: "1200px",
       xl: "1700px",
     },

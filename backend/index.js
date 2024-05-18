@@ -13,6 +13,6 @@ app.listen(port, () => {
   console.log(`http://localhost:${port}/top10ScamMoneyLostByYear`);
   console.log(`http://localhost:${port}/reportsNumGenderByYear`);
   console.log(`http://localhost:${port}/tips`);
-  console.log(`http://localhost:${port}/tips_card`);
+  console.log(`http://localhost:${port}/cards`);
   console.log(`http://localhost:${port}/`);
 });

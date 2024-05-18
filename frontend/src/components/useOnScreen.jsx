@@ -1,10 +1,9 @@
-// File: hooks/useOnScreen.js
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 const useOnScreen = (options) => {
   const ref = useRef();
   const [isVisible, setIsVisible] = useState(false);
-
+  //Bascially allows section to appear when it reachs that sections
   useEffect(() => {
     // Correctly create a new Intersection Observer
     const observer = new IntersectionObserver((entries) => {

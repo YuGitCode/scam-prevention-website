@@ -28,12 +28,14 @@ const DonutChart = () => {
             acc[myYear] = {};
           }
           acc[myYear][gender] = amount;
+          console.log(acc[myYear][gender]);
           return acc;
         }, {});
 
         const data = formatData[activeYear];
         const labels = Object.keys(data);
         const values = Object.values(data);
+
         const backgroundColors = labels.map(
           (label) => genderColors[label] || "rgba(201, 203, 207, 0.5)"
         );
