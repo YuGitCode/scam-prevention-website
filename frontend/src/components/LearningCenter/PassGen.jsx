@@ -101,7 +101,7 @@ const PassGen = () => {
             max='20'
             value={length}
             onChange={(e) => setLength(e.target.value)}
-            className='w-full'
+            className='w-full bg-[#d3d3d3] h-[5px]'
           />
         </div>
         <div className='flex gap-7 mb-4 justify-center'>

@@ -17,7 +17,7 @@ const Barchart = () => {
   // Update chart data when the active year changes
   useEffect(() => {
     axios
-      .get(`${apiUrl}/scamByAge`)
+      .get(`https://no-scam-au.com/scamByAge`)
       .then((res) => {
         const rawData = res.data;
         const formatData = rawData.reduce((acc, item) => {

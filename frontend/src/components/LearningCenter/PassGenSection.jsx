@@ -1,22 +1,22 @@
 import React from "react";
 import PassGen from "./PassGen";
-import { FaEye, FaEyeSlash, FaCopy } from "react-icons/fa";
+import { FaEyeSlash, FaCopy } from "react-icons/fa";
 import Fade from "react-awesome-reveal";
 
 const PassGenSection = () => {
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-800 to-indigo-900 '>
+    <div className='min-h-screen flex flex-col justify-center items-center'>
       <div className='container mx-auto px-4'>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-6 my-6 '>
-          <Fade>
+          <div data-aos='fade-right' data-aos-delay='300'>
             <PassGen />
-          </Fade>
-          <Fade delay={500}>
+          </div>
+          <div data-aos='fade-left'>
             <div className='flex flex-col justify-center md:min-h-screen bg-transparent p-4'>
               <h1 className='text-3xl font-bold uppercase mb-5 text-green-400'>
                 Random Password Generator
               </h1>
-              <hr className={`border-b-2`} />
+              <hr className={`border-b-2 border-white`} />
               <p className='text-lg mb-4 text-white mt-5'>
                 Select at least one or all options of either Capital letters,
                 Numerical Numbers, and Symbols. <br />
@@ -39,7 +39,7 @@ const PassGenSection = () => {
                 to view your generated password.
               </p>
             </div>
-          </Fade>
+          </div>
         </div>
       </div>
     </div>

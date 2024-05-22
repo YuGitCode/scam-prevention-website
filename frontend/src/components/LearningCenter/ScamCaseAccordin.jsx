@@ -6,7 +6,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 const ScamCaseAccordin = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-r from-blue-800 to-indigo-900'>
+    <div className='min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-800 to-indigo-900'>
       <Carousel
         data-aos='fade-up'
         data-aos-delay='300'
@@ -16,7 +16,7 @@ const ScamCaseAccordin = () => {
       >
         <Carousel.Item>
           <div className='flex justify-center md:m-5 mt-10'>
-            <div className='flex flex-col basis-2/3 gap-2 md:p-5 accordion-container'>
+            <div className='flex flex-col basis-2/3 gap-2 md:p-5 accordion-container w-full'>
               <div className='flex justify-center items-center text-white md:text-3xl font-bold m-2 md:m-10'>
                 Successful Investment Scam Prevention Case study
               </div>

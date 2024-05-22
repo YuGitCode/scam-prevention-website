@@ -37,9 +37,9 @@ function NavBar() {
   //This is just constants for the links to other pages
   const homepage = [
     { id: "/", title: "Home", active: false },
-    { id: "data", title: "Data", active: true },
     { id: "simulation", title: "Simulation", active: false },
     { id: "learning_center", title: "Learning Center", active: false },
+    { id: "data", title: "Data", active: true },
     { id: "news", title: "News", active: false },
   ];
 
@@ -101,6 +101,7 @@ function NavBar() {
                           style={({ isActive }) => ({
                             color: isActive ? "#34d399" : "white",
                           })}
+                          onClick={() => setToggle(false)} // Close menu on link click
                         >
                           {nav.title}
                         </NavLink>

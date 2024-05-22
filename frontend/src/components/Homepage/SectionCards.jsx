@@ -25,34 +25,6 @@ const SectionCards = () => {
           <div className='flex flex-col flex-grow bg-white shadow-md rounded-xl transition-transform duration-300 hover:scale-105'>
             <div className='p-6'>
               <h5 className='font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900'>
-                Data
-              </h5>
-              <p className='font-sans text-base font-light leading-relaxed'>
-                Explore the hidden patterns of Scams in Australia
-              </p>
-            </div>
-            <div className='mt-auto p-6'>
-              <button
-                className='font-sans font-bold text-center uppercase transition-all text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md hover:shadow-lg focus:opacity-[0.85] active:opacity-[0.85]'
-                type='button'
-                onClick={() => navigate("/data")}
-              >
-                Read More
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className='flex flex-col w-full sm:w-1/2 md:w-1/4 p-2'
-          data-aos='fade-up'
-          data-aos-delay='300'
-          data-aos-duration='3000'
-          mirror='true'
-        >
-          <div className='flex flex-col flex-grow bg-white shadow-md rounded-xl transition-transform duration-300 hover:scale-105'>
-            <div className='p-6'>
-              <h5 className='font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900'>
                 Simulation
               </h5>
               <p className='font-sans text-base font-light leading-relaxed'>
@@ -73,7 +45,7 @@ const SectionCards = () => {
         <div
           className='flex flex-col w-full sm:w-1/2 md:w-1/4 p-2'
           data-aos='fade-up'
-          data-aos-delay='600'
+          data-aos-delay='300'
           data-aos-duration='3000'
           mirror='true'
         >
@@ -100,7 +72,34 @@ const SectionCards = () => {
         <div
           className='flex flex-col w-full sm:w-1/2 md:w-1/4 p-2'
           data-aos='fade-up'
-          data-aos-delay='800'
+          data-aos-delay='600'
+          data-aos-duration='3000'
+          mirror='true'
+        >
+          <div className='flex flex-col flex-grow bg-white shadow-md rounded-xl transition-transform duration-300 hover:scale-105'>
+            <div className='p-6'>
+              <h5 className='font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900'>
+                Data
+              </h5>
+              <p className='font-sans text-base font-light leading-relaxed'>
+                Explore the hidden patterns of Scams in Australia
+              </p>
+            </div>
+            <div className='mt-auto p-6'>
+              <button
+                className='font-sans font-bold text-center uppercase transition-all text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md hover:shadow-lg focus:opacity-[0.85] active:opacity-[0.85]'
+                type='button'
+                onClick={() => navigate("/data")}
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className='flex flex-col w-full sm:w-1/2 md:w-1/4 p-2'
+          data-aos='fade-up'
+          data-aos-delay='900'
           data-aos-duration='3000'
           mirror='true'
         >

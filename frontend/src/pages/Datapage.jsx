@@ -44,7 +44,7 @@ const Datapage = () => {
         <h2 className='text-white text-2xl font-bold'>Scam Statistics</h2>
       </div>
       {/*Container for buttons, styled to be in a centered row*/}
-      <div className='flex justify-center p-4 gap-4'>
+      <div className='flex justify-center p-4 gap-1 md:gap-4 '>
         {/*Buttons to select which chart to display; clicking changes the 'visibleChart' state*/}
         <button
           className={buttonClass("barchart")}

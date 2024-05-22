@@ -7,6 +7,10 @@ const ReportSection = () => {
     threshold: 0.5, // Trigger when 50% of the element is in view
   });
 
+  const handleButtonClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className={`${layout.section}`}>
       <div
@@ -20,39 +24,33 @@ const ReportSection = () => {
             Channels of Reporting Scam
           </h2>
           <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-6 my-8 mx-auto'>
-            <a
-              href='https://www.scamwatch.gov.au/report-a-scam'
-              target='_blank'
-              rel='noopener noreferrer'
+            <button
+              onClick={() =>
+                handleButtonClick("https://www.scamwatch.gov.au/report-a-scam")
+              }
+              className='transition-transform duration-300 hover:scale-110 rounded border shadow-lg h-48 w-2/3 flex items-center justify-center cursor-pointer mx-auto bg-white'
             >
-              <div
-                data-aos='fade-right'
-                className='transition-transform duration-300 hover:scale-105 rounded border shadow-lg h-48 w-2/3 flex items-center justify-center cursor-pointer mx-auto bg-white'
-              >
-                <div className='text-center'>
-                  <div className='font-bold text-xl md:text-3xl sm:text-2xl text-[#34d399]'>
-                    I want to report a scam!
-                  </div>
+              <div className='text-center'>
+                <div className='font-bold text-xl md:text-3xl sm:text-2xl text-[#34d399]'>
+                  I want to report a scam!
                 </div>
               </div>
-            </a>
+            </button>
 
-            <a
-              href='https://www.cyber.gov.au/report-and-recover/report'
-              target='_blank'
-              rel='noopener noreferrer'
+            <button
+              onClick={() =>
+                handleButtonClick(
+                  "https://www.cyber.gov.au/report-and-recover/report"
+                )
+              }
+              className='transition-transform duration-300 hover:scale-110 rounded border shadow-lg h-48 w-2/3 flex items-center justify-center cursor-pointer mx-auto bg-white'
             >
-              <div
-                data-aos='fade-left'
-                className='transition-transform duration-300 hover:scale-105 rounded border shadow-lg h-48 w-2/3 flex items-center justify-center cursor-pointer mx-auto bg-white'
-              >
-                <div className='text-center '>
-                  <div className='font-bold text-xl md:text-3xl sm:text-2xl text-[#34D399]'>
-                    I have been scammed, where do I report?
-                  </div>
+              <div className='text-center '>
+                <div className='font-bold text-xl md:text-3xl sm:text-2xl text-[#34D399]'>
+                  I have been scammed, where do I report?
                 </div>
               </div>
-            </a>
+            </button>
           </div>
         </div>
       </div>

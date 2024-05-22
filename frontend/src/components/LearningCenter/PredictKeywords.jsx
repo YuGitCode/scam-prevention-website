@@ -23,7 +23,8 @@ const PredictKeywords = () => {
         "limited time", "exclusive offer", "your account is at risk", "free gift", "redeem now",
         "secure your account", "limited slots", "winning notification", "important message", "alert",
         "verify your details", "update required", "special promotion", "urgent message", "act immediately",
-        "limited availability", "last chance", "bonus offer", "urgent response required", "you've been chosen"
+        "limited availability", "last chance", "bonus offer", "urgent response required", "you've been chosen, Congratulations! You've won a $1,000,000 lottery prize",
+        "Earn $5,000 per week working from home - no experience needed!","info@amazingdeals.com","Incredible discounts",
     ];
     
     const urgencyPhrases = ["do not share", "immediately", "urgent", "now"];
@@ -79,7 +80,7 @@ const PredictKeywords = () => {
     }
 
     return (
-        <div className='flex-1 flex-col items-center justify-center md:min-h-screen h-96 to-blue-800 p-4 mt-40'>
+        <div className='flex-1 flex-col items-center justify-center md:min-h-screen h-96 to-blue-800 p-4'>
             <div
                 className='bg-white p-6 rounded shadow-md text-center '
                 style={{ width: "100%", maxWidth: "500px" }}

@@ -5,6 +5,7 @@ import axios from "axios";
 const apiUrl = import.meta.env.VITE_API_URL;
 const InformationCards = () => {
   const [tips, setTips] = useState([]); // State to hold the fetched tips
+  const [tipCards, setCards] = useState([]); // State to hold the fetched cards
   //Fetch Tips from the Database
   useEffect(() => {
     const fetchTips = async () => {
@@ -19,8 +20,6 @@ const InformationCards = () => {
 
     fetchTips(); // Call the fetch function
   }, []);
-
-  const [tipCards, setCards] = useState([]); // State to hold the fetched cards
 
   useEffect(() => {
     const fetchCards = async () => {
@@ -62,40 +61,41 @@ const InformationCards = () => {
           <hr className={`border-b-2`} />
         </div>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8'>
-          {tipCards.map((card, index) => (
-            <Fade
-              key={card.id}
-              cascade={false}
-              delay={index * 500}
-              direction='up'
-            >
-              <div className=' text-black p-4 rounded shadow-lg h-full'>
-                <img
-                  className='w-full'
-                  src={`${card.imageUrl}`}
-                  alt='Image description'
-                />
-                <div className='px-6 py-4 flex flex-col'>
-                  <div className='font-bold text-xl mb-2'>
-                    <span>{card.title}</span>
+          {Array.isArray(tipCards) &&
+            tipCards.map((card, index) => (
+              <Fade
+                key={card.id}
+                cascade={false}
+                delay={index * 500}
+                direction='up'
+              >
+                <div className=' text-black p-4 rounded shadow-lg h-full'>
+                  <img
+                    className='w-full'
+                    src={`${card.imageUrl}`}
+                    alt='Image description'
+                  />
+                  <div className='px-6 py-4 flex flex-col'>
+                    <div className='font-bold text-xl mb-2'>
+                      <span>{card.title}</span>
+                    </div>
+                    <div>
+                      <p className='text-gray-700 text-base'>
+                        {card.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className='text-gray-700 text-base'>
-                      {card.description}
-                    </p>
+                  <div className='px-6 pt-4 pb-2'>
+                    <button
+                      className='transition-transform duration-300 transform hover:scale-110 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+                      onClick={() => openModal(index + 1)}
+                    >
+                      Read more
+                    </button>
                   </div>
                 </div>
-                <div className='px-6 pt-4 pb-2'>
-                  <button
-                    className='transition-transform duration-300 transform hover:scale-110 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
-                    onClick={() => openModal(index + 1)}
-                  >
-                    Read more
-                  </button>
-                </div>
-              </div>
-            </Fade>
-          ))}
+              </Fade>
+            ))}
           <InformationModal
             isOpen={isModalOpen}
             content={modalContent}
