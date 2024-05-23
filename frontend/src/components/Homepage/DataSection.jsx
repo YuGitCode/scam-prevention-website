@@ -4,7 +4,7 @@ import Button from "../Buttons";
 import useOnScreen from "../useOnScreen";
 import Barchart from "../Datapages/HomeBarchart";
 import { Link } from "react-router-dom";
-import HomeBarchart from "../Datapages/HomeBarchart";
+
 function handleClick() {
   window.scrollTo(0, 0);
 }

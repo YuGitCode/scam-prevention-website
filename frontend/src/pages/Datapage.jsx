@@ -6,7 +6,6 @@ import BarchartT10S from "../components/Datapages/BarchartT10S.jsx";
 import BarchartT10SL from "../components/Datapages/BarchartT10SL.jsx";
 import BarchartMonthly from "../components/Datapages/BarchartMonthly.jsx";
 // Importing CSS styles
-import styles from "../styles";
 import scrollToTop from "../components/scrollToTop.jsx";
 
 // Datapage functional component definition

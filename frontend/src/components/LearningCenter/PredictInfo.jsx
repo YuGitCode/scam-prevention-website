@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { FaTrash } from "react-icons/fa";
-import RiskAnalysisModal from "./RiskAnalysisModal";
-import Fade from "react-awesome-reveal";
 
 const PredictInfo = ({ isModalOpen, setModalOpen }) => {
   const openModal = () => {

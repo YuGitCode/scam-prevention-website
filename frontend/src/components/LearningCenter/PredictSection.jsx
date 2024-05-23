@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Predict from "./Predict";
-import PredictKeywords from "./PredictKeywords";
-import { FaTrash, FaEyeSlash, FaCopy } from "react-icons/fa";
 import Fade from "react-awesome-reveal";
 import PredictInfo from "./PredictInfo";
 import RiskAnalysisModal from "./RiskAnalysisModal";

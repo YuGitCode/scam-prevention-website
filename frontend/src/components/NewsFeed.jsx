@@ -7,24 +7,6 @@ const NewsFeed = ({ timeframe }) => {
   const [displayedArticles, setDisplayedArticles] = useState([]); // Articles that are currently displayed
   const [visibleCount, setVisibleCount] = useState(6); // State to track the number of visible articles
 
-  // useEffect(() => {
-  //   const fetchNews = async () => {
-  //     const apiKey = import.meta.env.VITE_NEWS_API_KEY; // Ensure you're using your actual environment variable here
-  //     const query = encodeURIComponent(
-  //       `(scam OR cyber OR fraud OR phishing OR hacker) AND -bitcoin`
-  //     );
-  //     const response = await axios.get(
-  //       `https://newsapi.org/v2/everything?q=(scam OR cyber OR fraud OR phishing OR hacker)&searchIn=title,description,content&domains=abc.net.au,smh.com.au,news.com.au&apiKey=${apiKey}`
-  //     );
-
-  //     console.log(response.data);
-  //     setArticles(response.data.articles); // Set all fetched articles
-  //     setDisplayedArticles(response.data.articles.slice(0, 6)); // Display only the first 6 articles initially
-  //   };
-
-  //   fetchNews();
-  // }, [timeframe]);
-
   useEffect(() => {
     setArticles(newsData.articles); // Set all fetched articles from local JSON data
     setDisplayedArticles(newsData.articles.slice(0, 6)); // Display only the first 6 articles initially
